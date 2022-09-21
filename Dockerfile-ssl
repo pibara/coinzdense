@@ -1,0 +1,5 @@
+FROM nginx:latest
+COPY nginx.conf /etc/nginx/conf.d/nginx.conf
+COPY coin.z-den.se.key /etc/ssl/private/coin.z-den.se.key
+COPY cert/coin_z-den_se.crt /etc/ssl/certs/coin_z-den_se.crt
+ 

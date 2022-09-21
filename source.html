@@ -1,0 +1,138 @@
+<HTML>
+  <HEAD>
+    <TITLE>CoinZdense Source</TITLE>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0;
+}
+
+h2 {
+  color: #fce792;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #211901;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #36292a;
+  color: #fce792;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #211901;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #36292a;
+  color: #fce792;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+
+}
+
+/* unvisited link */
+.lnkbody a:link {
+  color: yellow;
+}
+
+/* visited link */
+.lnkbody a:visited {
+  color: yellow;
+}
+
+/* mouse over link */
+.lnkbody a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+.lnkbody a:active {
+  color: gray;
+}
+
+</style>
+  </HEAD>
+  <BODY bgcolor="#36292a">
+  <div class="navbar">
+    <a href="index.html"><img src="coinzdense.png" class="img-fluid" width="50"></a>
+    <a href="source.html">Code</a>
+    <a href="blog.html">Blog</a>
+    <a href="qr.html">Tip-jar</a>
+    <a href="ragnarok.html">In fiction</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="lnkbody" style="padding:0 16px">
+      <h2>Sources on github</h2>
+      <p>
+        Currently C++ is on hold while I'm working on a complete proto type implementation in Python. Once the prototype is complete, the plan is to create a solid C++ reference implementation before returning to Python and making a production ready Python implemtation.
+	<ul>
+	   <li><A HREF="https://github.com/pibara/coinzdense-python" target=”_blank”>Python</A></li>
+	   <li><A HREF="https://github.com/pibara/spq-sigs" target=”_blank”>C++</A></li>
+	</ul>
+      </p>
+      <p>
+        Once the Python and C++ implementations are production stable, the below languages are on the list for being implemented.
+        <ul>
+           <li>JavaScript</li>
+           <li>Monte</li>
+           <li>Rust</li>
+           <li>Clojure</li>
+           <li>ClojureScript</li>
+        </ul>
+      </p>
+      <p>
+        The below list of languages is the spare list. I hope to have time to work on them, but they are low priority right now.
+        <ul>
+           <li>Go</li>
+           <li>Elixir</li>
+           <li>TypeScript</li>
+        </ul>
+      </p>
+
+  </div>
+  </BODY>
+</HTML>

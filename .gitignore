@@ -1,0 +1,8 @@
+cert/AAACertificateServices.crt
+cert/SectigoRSADomainValidationSecureServerCA.crt
+cert/USERTrustRSAAAACA.crt
+certificate
+coin.z-den.se.csr
+coin.z-den.se.key
+*.tar
+v2

@@ -1,0 +1,212 @@
+<HTML>
+  <HEAD>
+    <TITLE>CoinZdense hash-based signatures</TITLE>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="qrcode.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0;
+}
+
+h2 {
+  color: #fce792;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #211901;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #36292a;
+  color: #fce792;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #211901;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #36292a;
+  color: #fce792;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+
+}
+
+/* unvisited link */
+.lnkbody a:link {
+  color: yellow;
+}
+
+/* visited link */
+.lnkbody a:visited {
+  color: yellow;
+}
+
+/* mouse over link */
+.lnkbody a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+.lnkbody a:active {
+  color: gray;
+}
+
+
+</style>
+  </HEAD>
+  <BODY bgcolor="#36292a">
+  <div class="navbar">
+    <a href="index.html"><img src="coinzdense.png" class="img-fluid" width="50"></a>
+    <a href="source.html">Code</a>
+    <a href="blog.html">Blog</a>
+    <a href="qr.html">Tip-jar</a>
+    <a href="ragnarok.html">In fiction</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div style="padding:0 16px">
+      <h2>Donate fiat currency</h2>
+      <p>
+      You can donate fiat currency with PayPal using the donate button.
+      </p>
+
+      <form action="https://www.paypal.com/donate" method="post" target="_top">
+ <!-- Identify your business so that you can collect the payments. -->
+ <input type="hidden" name="business" value="coin@z-den.se">
+ <!-- Specify details about the contribution -->
+ <input type="hidden" name="no_recurring" value="0">
+ <input type="hidden" name="item_name" value="CoinZdense Donation">
+ <input type="hidden" name="item_number" value="coin.z-den.se">
+ Donate currency:
+ <select name="currency_code">
+   <option value="AUD">Australian Dollar</option>
+   <option value="BRL">Brazilian real</option>
+   <option value="GBP">British Pound</option>
+   <option value="CAD">Canadian dollar</option>
+   <option value="DKK">Danish krone</option>
+   <option value="EUR" selected>Euro</option>
+   <option value="MXN">Mexican peso</option>
+   <option value="NZD">New Zealand dollar</option>
+   <option value="SGD">Singapore Dollar</option>
+   <option value="SEK">Swedish krona</option>
+   <option value="CHF">Swiss franc</option>
+   <option value="USD">United States dollar</option>
+ </select>
+ <br>
+ <!-- Display the payment button. -->
+ <input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate">
+ <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>
+  </div>
+  <div style="padding:0 16px">
+      <h2>Donate crypto</h2>
+      <p>
+      You can donate crypto by selecting the desired crypto currency and scaning the QR code.
+      </p>
+
+
+      <div id="qrcode" style="width:300px; height:300px; margin-top:15px;"></div>
+<div id="address">----</div>
+<select name="coin" id="text">
+  <option value="bitcoincash:qq62z0grt34zj6sgkca4k2dg396yhy82vg6d3jfszn">BCH</option>
+  <option value="18dij9SL5KYUYitpkPbFFKz8PQyj8Haw4c" selected>BTC</option>
+  <option value="XtuVUP94uHUkymF4YodWJkQyw1Ns2BHhxx">DASH</option>
+  <option value="DJbNdY9TLHrZ6XbceqyAcGAv9ZKCNH2tpH">DGB</option>
+  <option value="D5fKJFKYQoBENsF3fbKeQcvnhvBJRycaz9">DOGE</option>
+  <option value="13cW4E6jm1s8JNKEWAmNVBoVKb3e9bKaAhFbDkdLxgSnXFqW">DOT</option>
+  <option value="0x43628ffA72A499959B0fDd3FDCcD702d166Ad74c">ETH</option>
+  <option value="LLdThedViUN2rG5NDeFz2U7muXi9ibWD79">LTC</option>
+  <option value="Q010500ed000baed6f866f4f7bec5e6b4078f246e144691c80d178da24c029abeba04a0852059f1">QRL</option>
+  <option value="t1cLFGjxt5RLdCQK4AV4sSq3dra8iXQwSUc">ZEC</option>
+</select>
+<br>
+</center>
+<script type="text/javascript">
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width : 300,
+        height : 300
+});
+
+function makeCode () {          
+        var elText = document.getElementById("text");
+        var code = document.getElementById("address");
+        qrcode.makeCode(elText.value);
+        code.innerHTML = elText.value;
+        // navigator.clipboard.writeText(elText.value);
+}
+
+makeCode();
+
+$("#text").
+        on("change", function () {
+                makeCode();
+        })
+</script>
+
+
+
+  </div>
+  <div class="lnkbody" style="padding:0 16px">
+    <H2>Donate with $HIVE</H2>
+    <p>
+      On HIVE there are three ways to donate to the coinZdense project:
+    </p>
+    <ul>
+       <li>Send a $HIVE tip to <A HREF="https://peakd.com/@croupierbot">@croupierbot</A></li>
+       <li>Send a $HBD tip to <A HREF="https://peakd.com/@croupierbot">@croupierbot</A></li>
+       <li>Buy <b>COINZDENSE</b> project support tokens on <A HREF="https://tribaldex.com/trade/COINZDENSE">tribaldex</A></li>
+    </ul>
+    <p>
+    Please note that COINZDENSE tokens are just a gimmic.<br>
+    They are simple hive-engine tokens without any intrinsic value.<br>
+    They are <b>not</b> an investment.<br>
+    They are <b>not</b> quantum resistant, they are simple hive-engine tokens.<br>
+    Buy them because you want to support the CoinZdense project, NOT for any other reason.
+    </p>
+  </div>
+  </BODY>
+</HTML>
